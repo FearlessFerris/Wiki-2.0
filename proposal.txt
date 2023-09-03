@@ -21,40 +21,4 @@ ones below, but feel free to add more information.
 
     a. What does your database schema look like? 
 
-        At the moment my database schema consists of having a few different tables that will have many
-        to many relationships with one another in order to access necessary profile information and 
-        saved page articles after proper authentification 
-    
-    b. What kinds of issues might you run into with your API?
-
-        Some API's will only support HTTP protocol while others might only support HTTPS this is one
-        of many things I will need to keep in mind when creating this project application. API messages
-        that are not exactly helpful when it comes to debugging. 
-
-    c. Is there any sensative information that I need to secure?
-
-        Yes, for this website, I intend to create user profiles that will need to secure a password in
-        order to access said profile. Once authentified, I will need to route users to information that
-        will be displayed with the proper authorization protocols. 
-
-    d. What functionality will your application include? 
-
-        The application should be pretty straightforward. Basically, I intend to create  my very own version
-        of Wikipedia. I want to play around with making user profiles and saving pages to user profiles as well
-        as favoriting articles. I just think that the Wikipedia application has the potentional to be so much
-        more efficient with some changes. I felt like if you were to combine the ease of applicatiion navigation
-        that Spotify has, with something as necessary as Wikipedia, in today's world... would be so very... 
-        awesome!!!
-
-    e. What will the user flow look like? 
-
-        Just brainstorming here. I think I want to make the create user/login page super minimalistic. A user
-        will create a profile. Afterwards, will be redirected to their 'Page Board' this will display basic profile
-        information with that of saved / favorited articles and pages that have been added to their profile. I
-        always want to make sure that the information is what is the focus of the application. 
-
-    f. What features will make your site more than CRUD? Do you have any stretch goals?
-
-        Yes, I am currently not sure exactly what I want to use outside of the CRUD operations, but I am sure that
-        I would like to push myself with this project because this is one I intend on using for resume portfolio. 
         
