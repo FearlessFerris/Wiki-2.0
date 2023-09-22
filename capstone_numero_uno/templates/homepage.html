@@ -1,0 +1,33 @@
+{% extends 'base.html' %} 
+
+{% block title %} Homepage {% endblock %}
+
+
+{% block content %} 
+
+    <form class = 'form-group' action = '/search-pages' method = 'POST'>
+
+        {{ form.hidden_tag() }}
+
+        {% for field in form if field.widget.input_type != 'hidden' %}
+
+        <p class = 'text-center'> 
+            {% for error in field.errors %} 
+                {{ error }}
+            {% endfor %}
+        </p>
+
+        <div class = 'container'>
+            <div class = 'mt-5 row'>
+                <div class = 'mt-5 col-12 text-center'>
+                    <p class = 'text-info display-5 text-center'> {{ field.label }} {{ field( class = 'text-center' ) }} <button class = 'btn btn-outline-dark text-info btn-lg' type = 'submit'> Search </button> </p>
+                </div>
+            </div>
+        </div>
+            
+
+        {% endfor %}
+    </form>
+
+
+{% endblock %}

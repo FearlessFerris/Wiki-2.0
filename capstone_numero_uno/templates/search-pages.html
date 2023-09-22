@@ -1,0 +1,46 @@
+{% extends 'base.html' %} 
+
+{% block title %} {{ search_term }} {% endblock %} 
+
+{% block content %} 
+
+<form class = 'form-group' action = '/search-pages' method = 'POST'>
+
+    {{ form.hidden_tag() }}
+
+    {% for field in form if field.widget.input_type != 'hidden' %}
+
+    <p class = 'text-center'> 
+        {% for error in field.errors %} 
+            {{ error }}
+        {% endfor %}
+    </p>
+
+    <div class = 'container'>
+        <div class = 'row'>
+            <div class = 'col-12 text-center'>
+                <p class = 'text-info display-5 text-center'> {{ field.label }} {{ field(class = 'text-center' ) }} <button class = 'btn btn-outline-dark text-info btn-lg' type = 'submit'> Search </button> </p>
+            </div>
+        </div>
+    </div>
+        
+
+    {% endfor %}
+</form>
+
+
+
+    <div class = 'container'>
+        <div class = 'row'>
+            <div class = 'text-center'>
+                {% for page in pages %} 
+                    <a class = 'fs-5 text-decoration-none text-info' href = '/get-page?title={{ page.title }}'> {{ page.title }} <img class = 'text-center' src = "{{ page.thumbnail['url'] }}" width = "{{ page.thumbnail['width']}}"> <p class = 'text-dark fs-5'> {{ page.description }} </p></a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
